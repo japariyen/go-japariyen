@@ -20,11 +20,12 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/japariyen/go-japariyen/common"
 )
 
+// sha-256
 var (
-	MainnetGenesisHash = common.HexToHash("0xd4e56740f876aef8c010b86a40d5f56745a118d0906a34e69aec8c0db1cb8fa3") // Mainnet genesis hash to enforce below configs on
+	MainnetGenesisHash = common.HexToHash("0x9A9804861BE98EB2ED5E375D0EF6CBE20BE7DFF757F0FF179BCA2A6258ADC27F") // Mainnet genesis hash to enforce below configs on
 	TestnetGenesisHash = common.HexToHash("0x41941023680923e0fe4d74a34bdac8141f2540e3ae90623718e47d66d1ca4a2d") // Testnet genesis hash to enforce below configs on
 )
 
@@ -32,14 +33,14 @@ var (
 	// MainnetChainConfig is the chain parameters to run a node on the main network.
 	MainnetChainConfig = &ChainConfig{
 		ChainId:        big.NewInt(1),
-		HomesteadBlock: big.NewInt(1150000),
-		DAOForkBlock:   big.NewInt(1920000),
+		HomesteadBlock: big.NewInt(200000),
+		DAOForkBlock:   nil,
 		DAOForkSupport: true,
-		EIP150Block:    big.NewInt(2463000),
-		EIP150Hash:     common.HexToHash("0x2086799aeebeae135c246c65021c82b4e15a2c451340993aacfd2751886514f0"),
-		EIP155Block:    big.NewInt(2675000),
-		EIP158Block:    big.NewInt(2675000),
-		ByzantiumBlock: big.NewInt(4370000),
+		EIP150Block:    big.NewInt(200000),
+		EIP150Hash:     common.HexToHash("0xA612F10A777A40FF710630DD243F08D902CB5F1C466D6AFB8FDA9E8DAB42751F"),
+		EIP155Block:    big.NewInt(600000),
+		EIP158Block:    big.NewInt(600000),
+		ByzantiumBlock: big.NewInt(800000),
 
 		Ethash: new(EthashConfig),
 	}
