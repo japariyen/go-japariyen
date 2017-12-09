@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common/hexutil"
+	"github.com/japariyen/go-japariyen/common/hexutil"
 	"github.com/ethereum/go-ethereum/crypto"
 )
 
