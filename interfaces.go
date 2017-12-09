@@ -23,7 +23,7 @@ import (
 	"math/big"
 
 	"github.com/japariyen/go-japariyen/common"
-	"github.com/ethereum/go-ethereum/core/types"
+	"github.com/japariyen/go-japariyen/core/types"
 )
 
 // NotFound is returned by API methods if the requested item does not exist.

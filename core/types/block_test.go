@@ -24,7 +24,7 @@ import (
 	"testing"
 
 	"github.com/japariyen/go-japariyen/common"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/japariyen/go-japariyen/rlp"
 )
 
 // from bcValidBlockTest.json, "SimpleTx"

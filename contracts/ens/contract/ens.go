@@ -6,10 +6,10 @@ package contract
 import (
 	"strings"
 
-	"github.com/ethereum/go-ethereum/accounts/abi"
-	"github.com/ethereum/go-ethereum/accounts/abi/bind"
+	"github.com/japariyen/go-japariyen/accounts/abi"
+	"github.com/japariyen/go-japariyen/accounts/abi/bind"
 	"github.com/japariyen/go-japariyen/common"
-	"github.com/ethereum/go-ethereum/core/types"
+	"github.com/japariyen/go-japariyen/core/types"
 )
 
 // ENSABI is the input ABI used to generate the binding from.

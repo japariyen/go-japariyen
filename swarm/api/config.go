@@ -25,11 +25,11 @@ import (
 	"path/filepath"
 
 	"github.com/japariyen/go-japariyen/common"
-	"github.com/ethereum/go-ethereum/contracts/ens"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/swarm/network"
-	"github.com/ethereum/go-ethereum/swarm/services/swap"
-	"github.com/ethereum/go-ethereum/swarm/storage"
+	"github.com/japariyen/go-japariyen/contracts/ens"
+	"github.com/japariyen/go-japariyen/crypto"
+	"github.com/japariyen/go-japariyen/swarm/network"
+	"github.com/japariyen/go-japariyen/swarm/services/swap"
+	"github.com/japariyen/go-japariyen/swarm/storage"
 )
 
 const (

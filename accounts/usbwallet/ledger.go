@@ -28,12 +28,12 @@ import (
 	"io"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/accounts"
+	"github.com/japariyen/go-japariyen/accounts"
 	"github.com/japariyen/go-japariyen/common"
 	"github.com/japariyen/go-japariyen/common/hexutil"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/japariyen/go-japariyen/core/types"
+	"github.com/japariyen/go-japariyen/log"
+	"github.com/japariyen/go-japariyen/rlp"
 )
 
 // ledgerOpcode is an enumeration encoding the supported Ledger opcodes.

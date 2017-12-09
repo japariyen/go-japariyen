@@ -20,7 +20,7 @@ import (
 	"time"
 
 	"github.com/japariyen/go-japariyen/common/bitutil"
-	"github.com/ethereum/go-ethereum/light"
+	"github.com/japariyen/go-japariyen/light"
 )
 
 const (

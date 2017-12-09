@@ -23,7 +23,7 @@ import (
 	"testing"
 
 	"github.com/japariyen/go-japariyen/common"
-	"github.com/ethereum/go-ethereum/ethdb"
+	"github.com/japariyen/go-japariyen/ethdb"
 )
 
 func TestIterator(t *testing.T) {

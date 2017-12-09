@@ -23,8 +23,8 @@ import (
 	"sort"
 
 	"github.com/japariyen/go-japariyen/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/japariyen/go-japariyen/core/types"
+	"github.com/japariyen/go-japariyen/log"
 )
 
 // nonceHeap is a heap.Interface implementation over 64bit unsigned integers for

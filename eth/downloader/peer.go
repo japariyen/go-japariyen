@@ -30,8 +30,8 @@ import (
 	"time"
 
 	"github.com/japariyen/go-japariyen/common"
-	"github.com/ethereum/go-ethereum/event"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/japariyen/go-japariyen/event"
+	"github.com/japariyen/go-japariyen/log"
 )
 
 const (

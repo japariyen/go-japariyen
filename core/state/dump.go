@@ -21,8 +21,8 @@ import (
 	"fmt"
 
 	"github.com/japariyen/go-japariyen/common"
-	"github.com/ethereum/go-ethereum/rlp"
-	"github.com/ethereum/go-ethereum/trie"
+	"github.com/japariyen/go-japariyen/rlp"
+	"github.com/japariyen/go-japariyen/trie"
 )
 
 type DumpAccount struct {

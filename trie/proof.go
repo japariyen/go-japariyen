@@ -21,9 +21,9 @@ import (
 	"fmt"
 
 	"github.com/japariyen/go-japariyen/common"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/japariyen/go-japariyen/crypto"
+	"github.com/japariyen/go-japariyen/log"
+	"github.com/japariyen/go-japariyen/rlp"
 )
 
 // Prove constructs a merkle proof for key. The result contains all

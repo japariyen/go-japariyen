@@ -22,10 +22,10 @@ import (
 	"time"
 
 	"github.com/japariyen/go-japariyen/common"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/japariyen/go-japariyen/core"
+	"github.com/japariyen/go-japariyen/ethdb"
+	"github.com/japariyen/go-japariyen/log"
+	"github.com/japariyen/go-japariyen/rlp"
 )
 
 var deduplicateData = []byte("dbUpgrade_20170714deduplicateData")

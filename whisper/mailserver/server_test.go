@@ -25,8 +25,8 @@ import (
 	"time"
 
 	"github.com/japariyen/go-japariyen/common"
-	"github.com/ethereum/go-ethereum/crypto"
-	whisper "github.com/ethereum/go-ethereum/whisper/whisperv5"
+	"github.com/japariyen/go-japariyen/crypto"
+	whisper "github.com/japariyen/go-japariyen/whisper/whisperv5"
 )
 
 const powRequirement = 0.00001

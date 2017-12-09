@@ -21,8 +21,8 @@ import (
 	"sync"
 
 	"github.com/japariyen/go-japariyen/common"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/trie"
+	"github.com/japariyen/go-japariyen/ethdb"
+	"github.com/japariyen/go-japariyen/trie"
 	lru "github.com/hashicorp/golang-lru"
 )
 

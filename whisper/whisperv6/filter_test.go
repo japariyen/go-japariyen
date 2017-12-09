@@ -23,7 +23,7 @@ import (
 	"time"
 
 	"github.com/japariyen/go-japariyen/common"
-	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/japariyen/go-japariyen/crypto"
 )
 
 var seed int64

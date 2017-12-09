@@ -23,7 +23,7 @@ import (
 
 	"github.com/japariyen/go-japariyen/common"
 	"github.com/japariyen/go-japariyen/common/math"
-	"github.com/ethereum/go-ethereum/core/vm"
+	"github.com/japariyen/go-japariyen/core/vm"
 )
 
 type JSONLogger struct {

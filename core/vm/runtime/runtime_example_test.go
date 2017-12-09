@@ -20,7 +20,7 @@ import (
 	"fmt"
 
 	"github.com/japariyen/go-japariyen/common"
-	"github.com/ethereum/go-ethereum/core/vm/runtime"
+	"github.com/japariyen/go-japariyen/core/vm/runtime"
 )
 
 func ExampleExecute() {

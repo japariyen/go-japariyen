@@ -30,8 +30,8 @@ import (
 	"bazil.org/fuse"
 	"bazil.org/fuse/fs"
 	"github.com/japariyen/go-japariyen/common"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/swarm/api"
+	"github.com/japariyen/go-japariyen/log"
+	"github.com/japariyen/go-japariyen/swarm/api"
 )
 
 var (

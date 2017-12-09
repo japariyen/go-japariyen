@@ -24,7 +24,7 @@ import (
 	"strings"
 
 	"github.com/japariyen/go-japariyen/common/math"
-	"github.com/ethereum/go-ethereum/core/vm"
+	"github.com/japariyen/go-japariyen/core/vm"
 )
 
 // Compiler contains information about the parsed source

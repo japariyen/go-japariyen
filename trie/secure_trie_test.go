@@ -23,8 +23,8 @@ import (
 	"testing"
 
 	"github.com/japariyen/go-japariyen/common"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/ethdb"
+	"github.com/japariyen/go-japariyen/crypto"
+	"github.com/japariyen/go-japariyen/ethdb"
 )
 
 func newEmptySecure() *SecureTrie {

@@ -24,8 +24,8 @@ import (
 	"testing"
 
 	"github.com/japariyen/go-japariyen/common/math"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/japariyen/go-japariyen/core/types"
+	"github.com/japariyen/go-japariyen/params"
 )
 
 type diffTest struct {

@@ -35,8 +35,8 @@ import (
 
 	"github.com/davecgh/go-spew/spew"
 	"github.com/japariyen/go-japariyen/common"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/japariyen/go-japariyen/crypto"
+	"github.com/japariyen/go-japariyen/rlp"
 )
 
 func init() {

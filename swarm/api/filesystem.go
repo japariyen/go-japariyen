@@ -27,8 +27,8 @@ import (
 	"sync"
 
 	"github.com/japariyen/go-japariyen/common"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/swarm/storage"
+	"github.com/japariyen/go-japariyen/log"
+	"github.com/japariyen/go-japariyen/swarm/storage"
 )
 
 const maxParallelFiles = 5

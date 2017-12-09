@@ -24,7 +24,7 @@ import (
 	"fmt"
 
 	"github.com/japariyen/go-japariyen/common/math"
-	"github.com/ethereum/go-ethereum/crypto/secp256k1"
+	"github.com/japariyen/go-japariyen/crypto/secp256k1"
 )
 
 func Ecrecover(hash, sig []byte) ([]byte, error) {

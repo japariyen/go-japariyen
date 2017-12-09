@@ -16,13 +16,13 @@
 
 // Contains all the wrappers from the go-ethereum root package.
 
-package geth
+package gjpy
 
 import (
 	"errors"
 	"math/big"
 
-	ethereum "github.com/ethereum/go-ethereum"
+	ethereum "github.com/japariyen/go-japariyen"
 	"github.com/japariyen/go-japariyen/common"
 )
 
