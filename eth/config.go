@@ -25,10 +25,10 @@ import (
 
 	"github.com/japariyen/go-japariyen/common"
 	"github.com/japariyen/go-japariyen/common/hexutil"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/eth/downloader"
-	"github.com/ethereum/go-ethereum/eth/gasprice"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/japariyen/go-japariyen/core"
+	"github.com/japariyen/go-japariyen/eth/downloader"
+	"github.com/japariyen/go-japariyen/eth/gasprice"
+	"github.com/japariyen/go-japariyen/params"
 )
 
 // DefaultConfig contains default settings for use on the Ethereum main net.

@@ -31,8 +31,8 @@ import (
 	"strings"
 
 	"github.com/japariyen/go-japariyen/common"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/crypto/secp256k1"
+	"github.com/japariyen/go-japariyen/crypto"
+	"github.com/japariyen/go-japariyen/crypto/secp256k1"
 )
 
 const NodeIDBits = 512

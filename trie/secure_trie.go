@@ -20,7 +20,7 @@ import (
 	"fmt"
 
 	"github.com/japariyen/go-japariyen/common"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/japariyen/go-japariyen/log"
 )
 
 var secureKeyPrefix = []byte("secure-key-")

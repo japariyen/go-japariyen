@@ -31,8 +31,8 @@ import (
 	check "gopkg.in/check.v1"
 
 	"github.com/japariyen/go-japariyen/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/ethdb"
+	"github.com/japariyen/go-japariyen/core/types"
+	"github.com/japariyen/go-japariyen/ethdb"
 )
 
 // Tests that updating a state trie does not leak any database writes prior to

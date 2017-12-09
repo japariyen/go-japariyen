@@ -23,9 +23,9 @@ import (
 	"math/big"
 
 	"github.com/japariyen/go-japariyen/common"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/rlp"
-	"github.com/ethereum/go-ethereum/trie"
+	"github.com/japariyen/go-japariyen/crypto"
+	"github.com/japariyen/go-japariyen/rlp"
+	"github.com/japariyen/go-japariyen/trie"
 )
 
 var emptyCodeHash = crypto.Keccak256(nil)

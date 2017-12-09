@@ -22,8 +22,8 @@ import (
 	"fmt"
 
 	"github.com/japariyen/go-japariyen/common"
-	"github.com/ethereum/go-ethereum/crypto/sha3"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/japariyen/go-japariyen/crypto/sha3"
+	"github.com/japariyen/go-japariyen/log"
 	"github.com/rcrowley/go-metrics"
 )
 

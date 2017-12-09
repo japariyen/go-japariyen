@@ -22,9 +22,9 @@ import (
 
 	"github.com/japariyen/go-japariyen/common"
 	"github.com/japariyen/go-japariyen/common/math"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/japariyen/go-japariyen/core/vm"
+	"github.com/japariyen/go-japariyen/log"
+	"github.com/japariyen/go-japariyen/params"
 )
 
 var (

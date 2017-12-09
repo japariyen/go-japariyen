@@ -20,7 +20,7 @@ import (
 	"testing"
 
 	"github.com/japariyen/go-japariyen/common"
-	"github.com/ethereum/go-ethereum/ethdb"
+	"github.com/japariyen/go-japariyen/ethdb"
 )
 
 var addr = common.BytesToAddress([]byte("test"))

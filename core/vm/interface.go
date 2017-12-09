@@ -20,7 +20,7 @@ import (
 	"math/big"
 
 	"github.com/japariyen/go-japariyen/common"
-	"github.com/ethereum/go-ethereum/core/types"
+	"github.com/japariyen/go-japariyen/core/types"
 )
 
 // StateDB is an EVM database for full state querying.

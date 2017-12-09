@@ -27,7 +27,7 @@ import (
 	"time"
 
 	"github.com/japariyen/go-japariyen/common"
-	"github.com/ethereum/go-ethereum/internal/jsre/deps"
+	"github.com/japariyen/go-japariyen/internal/jsre/deps"
 	"github.com/robertkrimen/otto"
 )
 

@@ -21,9 +21,9 @@ import (
 	"sync"
 
 	"github.com/japariyen/go-japariyen/common"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/rlp"
-	"github.com/ethereum/go-ethereum/trie"
+	"github.com/japariyen/go-japariyen/crypto"
+	"github.com/japariyen/go-japariyen/rlp"
+	"github.com/japariyen/go-japariyen/trie"
 )
 
 // NodeSet stores a set of trie nodes. It implements trie.Database and can also

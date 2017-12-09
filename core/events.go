@@ -18,7 +18,7 @@ package core
 
 import (
 	"github.com/japariyen/go-japariyen/common"
-	"github.com/ethereum/go-ethereum/core/types"
+	"github.com/japariyen/go-japariyen/core/types"
 )
 
 // TxPreEvent is posted when a transaction enters the transaction pool.

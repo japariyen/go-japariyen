@@ -27,10 +27,10 @@ import (
 	"testing"
 
 	"github.com/japariyen/go-japariyen/common"
-	"github.com/ethereum/go-ethereum/swarm/api"
-	swarm "github.com/ethereum/go-ethereum/swarm/api/client"
-	"github.com/ethereum/go-ethereum/swarm/storage"
-	"github.com/ethereum/go-ethereum/swarm/testutil"
+	"github.com/japariyen/go-japariyen/swarm/api"
+	swarm "github.com/japariyen/go-japariyen/swarm/api/client"
+	"github.com/japariyen/go-japariyen/swarm/storage"
+	"github.com/japariyen/go-japariyen/swarm/testutil"
 )
 
 func TestBzzrGetPath(t *testing.T) {

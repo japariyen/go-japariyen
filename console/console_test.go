@@ -27,10 +27,10 @@ import (
 	"time"
 
 	"github.com/japariyen/go-japariyen/common"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/eth"
-	"github.com/ethereum/go-ethereum/internal/jsre"
-	"github.com/ethereum/go-ethereum/node"
+	"github.com/japariyen/go-japariyen/core"
+	"github.com/japariyen/go-japariyen/eth"
+	"github.com/japariyen/go-japariyen/internal/jsre"
+	"github.com/japariyen/go-japariyen/node"
 )
 
 const (

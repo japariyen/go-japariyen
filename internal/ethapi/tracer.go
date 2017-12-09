@@ -25,7 +25,7 @@ import (
 
 	"github.com/japariyen/go-japariyen/common"
 	"github.com/japariyen/go-japariyen/common/hexutil"
-	"github.com/ethereum/go-ethereum/core/vm"
+	"github.com/japariyen/go-japariyen/core/vm"
 	"github.com/robertkrimen/otto"
 )
 

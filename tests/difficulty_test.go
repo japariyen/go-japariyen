@@ -23,7 +23,7 @@ import (
 	"math/big"
 
 	"github.com/japariyen/go-japariyen/common"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/japariyen/go-japariyen/params"
 )
 
 var (

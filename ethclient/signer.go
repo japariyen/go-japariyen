@@ -21,7 +21,7 @@ import (
 	"math/big"
 
 	"github.com/japariyen/go-japariyen/common"
-	"github.com/ethereum/go-ethereum/core/types"
+	"github.com/japariyen/go-japariyen/core/types"
 )
 
 // senderFromServer is a types.Signer that remembers the sender address returned by the RPC

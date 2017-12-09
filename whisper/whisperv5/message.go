@@ -28,9 +28,9 @@ import (
 	"strconv"
 
 	"github.com/japariyen/go-japariyen/common"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/crypto/ecies"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/japariyen/go-japariyen/crypto"
+	"github.com/japariyen/go-japariyen/crypto/ecies"
+	"github.com/japariyen/go-japariyen/log"
 )
 
 // Options specifies the exact way a message should be wrapped into an Envelope.
