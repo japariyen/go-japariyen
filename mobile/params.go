@@ -16,14 +16,14 @@
 
 // Contains all the wrappers from the params package.
 
-package geth
+package gjpy
 
 import (
 	"encoding/json"
 
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/p2p/discv5"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/japariyen/go-japariyen/core"
+	"github.com/japariyen/go-japariyen/p2p/discv5"
+	"github.com/japariyen/go-japariyen/params"
 )
 
 // MainnetGenesis returns the JSON spec to use for the main Ethereum network. It

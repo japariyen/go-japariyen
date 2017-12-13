@@ -16,16 +16,16 @@
 
 // Contains all the wrappers from the core/types package.
 
-package geth
+package gjpy
 
 import (
 	"encoding/json"
 	"errors"
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/japariyen/go-japariyen/common"
+	"github.com/japariyen/go-japariyen/core/types"
+	"github.com/japariyen/go-japariyen/rlp"
 )
 
 // A Nonce is a 64-bit hash which proves (combined with the mix-hash) that
