@@ -40,6 +40,15 @@ var (
 		EIP150Hash:     common.HexToHash("0x6a617061726979656e696b6564616d6f72697368697461"),
 		EIP155Block:    big.NewInt(0),
 		EIP158Block:    big.NewInt(0),
+		JaparicollapseBlock:    big.NewInt(0),
+		JaparidevastatedBlock:    big.NewInt(940211),
+		JapariskyrocketBlock:    big.NewInt(1521306),
+		KabanBlock:    big.NewInt(2102401),
+		CellienBlock:    big.NewInt(3042611),
+		AsatteBlock:    big.NewInt(3623706),
+		FriendsBlock:    big.NewInt(4204801),
+		MiraiBlock:    big.NewInt(5145011),
+		JapariworldBlock:    big.NewInt(5726106),
 		ByzantiumBlock: nil,
 
 		Ethash: new(EthashConfig),
@@ -56,6 +65,15 @@ var (
 		EIP155Block:    big.NewInt(10),
 		EIP158Block:    big.NewInt(10),
 		ByzantiumBlock: big.NewInt(1700000),
+		JaparicollapseBlock:    big.NewInt(0),
+		JaparidevastatedBlock:    big.NewInt(940211),
+		JapariskyrocketBlock:    big.NewInt(1521306),
+		KabanBlock:    big.NewInt(2102401),
+		CellienBlock:    big.NewInt(3042611),
+		AsatteBlock:    big.NewInt(3623706),
+		FriendsBlock:    big.NewInt(4204801),
+		MiraiBlock:    big.NewInt(5145011),
+		JapariworldBlock:    big.NewInt(5726106),
 
 		Ethash: new(EthashConfig),
 	}
@@ -71,6 +89,15 @@ var (
 		EIP155Block:    big.NewInt(3),
 		EIP158Block:    big.NewInt(3),
 		ByzantiumBlock: big.NewInt(1035301),
+		JaparicollapseBlock:    big.NewInt(0),
+		JaparidevastatedBlock:    big.NewInt(940211),
+		JapariskyrocketBlock:    big.NewInt(1521306),
+		KabanBlock:    big.NewInt(2102401),
+		CellienBlock:    big.NewInt(3042611),
+		AsatteBlock:    big.NewInt(3623706),
+		FriendsBlock:    big.NewInt(4204801),
+		MiraiBlock:    big.NewInt(5145011),
+		JapariworldBlock:    big.NewInt(5726106),
 
 		Clique: &CliqueConfig{
 			Period: 15,
@@ -83,16 +110,16 @@ var (
 	//
 	// This configuration is intentionally not using keyed fields to force anyone
 	// adding flags to the config to also have to set these fields.
-	AllEthashProtocolChanges = &ChainConfig{big.NewInt(1337), big.NewInt(0), nil, false, big.NewInt(0), common.Hash{}, big.NewInt(0), big.NewInt(0), big.NewInt(0), new(EthashConfig), nil}
+	AllEthashProtocolChanges = &ChainConfig{big.NewInt(1337), big.NewInt(0), nil, false, big.NewInt(0), common.Hash{}, big.NewInt(0), big.NewInt(0), big.NewInt(0), big.NewInt(0), big.NewInt(0), big.NewInt(0), big.NewInt(0), big.NewInt(0), big.NewInt(0), big.NewInt(0), big.NewInt(0), big.NewInt(0), new(EthashConfig), nil}
 
 	// AllCliqueProtocolChanges contains every protocol change (EIPs) introduced
 	// and accepted by the Ethereum core developers into the Clique consensus.
 	//
 	// This configuration is intentionally not using keyed fields to force anyone
 	// adding flags to the config to also have to set these fields.
-	AllCliqueProtocolChanges = &ChainConfig{big.NewInt(1337), big.NewInt(0), nil, false, big.NewInt(0), common.Hash{}, big.NewInt(0), big.NewInt(0), big.NewInt(0), nil, &CliqueConfig{Period: 0, Epoch: 30000}}
+	AllCliqueProtocolChanges = &ChainConfig{big.NewInt(1337), big.NewInt(0), nil, false, big.NewInt(0), common.Hash{}, big.NewInt(0), big.NewInt(0), big.NewInt(0), big.NewInt(0), big.NewInt(0), big.NewInt(0), big.NewInt(0), big.NewInt(0), big.NewInt(0), big.NewInt(0), big.NewInt(0), big.NewInt(0), nil, &CliqueConfig{Period: 0, Epoch: 30000}}
 
-	TestChainConfig = &ChainConfig{big.NewInt(1), big.NewInt(0), nil, false, big.NewInt(0), common.Hash{}, big.NewInt(0), big.NewInt(0), big.NewInt(0), new(EthashConfig), nil}
+	TestChainConfig = &ChainConfig{big.NewInt(1), big.NewInt(0), nil, false, big.NewInt(0), common.Hash{}, big.NewInt(0), big.NewInt(0), big.NewInt(0), big.NewInt(0), big.NewInt(0), big.NewInt(0), big.NewInt(0), big.NewInt(0), big.NewInt(0), big.NewInt(0), big.NewInt(0), big.NewInt(0), new(EthashConfig), nil}
 	TestRules       = TestChainConfig.Rules(new(big.Int))
 )
 
@@ -117,6 +144,17 @@ type ChainConfig struct {
 	EIP158Block *big.Int `json:"eip158Block,omitempty"` // EIP158 HF block
 
 	ByzantiumBlock *big.Int `json:"byzantiumBlock,omitempty"` // Byzantium switch block (nil = no fork, 0 = already on byzantium)
+
+	// japari configurations
+	JaparicollapseBlock *big.Int `json:"japaricollapseBlock,omitempty"` // Japaricollapse switch block (nil = no fork, 0 = already on japaricollapse)
+	JaparidevastatedBlock *big.Int `json:"japaridevastatedBlock,omitempty"` // Japaridevastated switch block (nil = no fork, 0 = already on japaridevastated)
+	JapariskyrocketBlock *big.Int `json:"japariskyrocketBlock,omitempty"` // Japariskyrocket switch block (nil = no fork, 0 = already on japariskyrocket)
+	KabanBlock *big.Int `json:"kabanBlock,omitempty"` // Kaban switch block (nil = no fork, 0 = already on kaban)
+	CellienBlock *big.Int `json:"cellienBlock,omitempty"` // Cellien switch block (nil = no fork, 0 = already on cellien)
+	AsatteBlock *big.Int `json:"asatteBlock,omitempty"` // Asatte switch block (nil = no fork, 0 = already on asatte)
+	FriendsBlock *big.Int `json:"friendsBlock,omitempty"` // Friends switch block (nil = no fork, 0 = already on friends)
+	MiraiBlock *big.Int `json:"miraiBlock,omitempty"` // Mirai switch block (nil = no fork, 0 = already on mirai)
+	JapariworldBlock *big.Int `json:"japariworldBlock,omitempty"` // Japariworld switch block (nil = no fork, 0 = already on japariworld)
 
 	// Various consensus engines
 	Ethash *EthashConfig `json:"ethash,omitempty"`
@@ -153,7 +191,7 @@ func (c *ChainConfig) String() string {
 	default:
 		engine = "unknown"
 	}
-	return fmt.Sprintf("{ChainID: %v Homestead: %v DAO: %v DAOSupport: %v EIP150: %v EIP155: %v EIP158: %v Byzantium: %v Engine: %v}",
+	return fmt.Sprintf("{ChainID: %v Homestead: %v DAO: %v DAOSupport: %v EIP150: %v EIP155: %v EIP158: %v Byzantium: %v Japaricollapse: %v Japaridevastated: %v Japariskyrocket: %v Kaban: %v Cellien: %v Asatte: %v Friends: %v Mirai: %v Japariworld: %v Engine: %v}",
 		c.ChainId,
 		c.HomesteadBlock,
 		c.DAOForkBlock,
@@ -162,6 +200,15 @@ func (c *ChainConfig) String() string {
 		c.EIP155Block,
 		c.EIP158Block,
 		c.ByzantiumBlock,
+		c.JaparicollapseBlock,
+		c.JaparidevastatedBlock,
+		c.JapariskyrocketBlock,
+		c.KabanBlock,
+		c.CellienBlock,
+		c.AsatteBlock,
+		c.FriendsBlock,
+		c.MiraiBlock,
+		c.JapariworldBlock,
 		engine,
 	)
 }
@@ -192,6 +239,34 @@ func (c *ChainConfig) IsByzantium(num *big.Int) bool {
 	return isForked(c.ByzantiumBlock, num)
 }
 
+func (c *ChainConfig) IsJaparicollapse(num *big.Int) bool {
+  return isForked(c.JaparicollapseBlock, num)
+}
+func (c *ChainConfig) IsJaparidevastated(num *big.Int) bool {
+  return isForked(c.JaparidevastatedBlock, num)
+}
+func (c *ChainConfig) IsJapariskyrocket(num *big.Int) bool {
+  return isForked(c.JapariskyrocketBlock, num)
+}
+func (c *ChainConfig) IsKaban(num *big.Int) bool {
+  return isForked(c.KabanBlock, num)
+}
+func (c *ChainConfig) IsCellien(num *big.Int) bool {
+  return isForked(c.CellienBlock, num)
+}
+func (c *ChainConfig) IsAsatte(num *big.Int) bool {
+  return isForked(c.AsatteBlock, num)
+}
+func (c *ChainConfig) IsFriends(num *big.Int) bool {
+  return isForked(c.FriendsBlock, num)
+}
+func (c *ChainConfig) IsMirai(num *big.Int) bool {
+  return isForked(c.MiraiBlock, num)
+}
+func (c *ChainConfig) IsJapariworld(num *big.Int) bool {
+  return isForked(c.JapariworldBlock, num)
+}
+
 // GasTable returns the gas table corresponding to the current phase (homestead or homestead reprice).
 //
 // The returned GasTable's fields shouldn't, under any circumstances, be changed.
@@ -200,9 +275,9 @@ func (c *ChainConfig) GasTable(num *big.Int) GasTable {
 		return GasTableHomestead
 	}
 	switch {
-	case c.IsEIP158(num):
+	case c.IsEIP158(num)||c.IsFriends(num)||c.IsMirai(num)||c.IsJapariworld(num):
 		return GasTableEIP158
-	case c.IsEIP150(num):
+	case c.IsEIP150(num)||c.IsKaban(num)||c.IsCellien(num)||c.IsAsatte(num):
 		return GasTableEIP150
 	default:
 		return GasTableHomestead
@@ -319,6 +394,7 @@ type Rules struct {
 	ChainId                                   *big.Int
 	IsHomestead, IsEIP150, IsEIP155, IsEIP158 bool
 	IsByzantium                               bool
+	IsJaparicollapse,IsJaparidevastated,IsJapariskyrocket,IsKaban,IsCellien,IsAsatte,IsFriends,IsMirai,IsJapariworld bool
 }
 
 func (c *ChainConfig) Rules(num *big.Int) Rules {
@@ -326,5 +402,5 @@ func (c *ChainConfig) Rules(num *big.Int) Rules {
 	if chainId == nil {
 		chainId = new(big.Int)
 	}
-	return Rules{ChainId: new(big.Int).Set(chainId), IsHomestead: c.IsHomestead(num), IsEIP150: c.IsEIP150(num), IsEIP155: c.IsEIP155(num), IsEIP158: c.IsEIP158(num), IsByzantium: c.IsByzantium(num)}
+	return Rules{ChainId: new(big.Int).Set(chainId), IsHomestead: c.IsHomestead(num), IsEIP150: c.IsEIP150(num), IsEIP155: c.IsEIP155(num), IsEIP158: c.IsEIP158(num), IsByzantium: c.IsByzantium(num), IsJaparicollapse: c.IsJaparicollapse(num),IsJaparidevastated: c.IsJaparidevastated(num),IsJapariskyrocket: c.IsJapariskyrocket(num),IsKaban: c.IsKaban(num),IsCellien: c.IsCellien(num),IsAsatte: c.IsAsatte(num),IsFriends: c.IsFriends(num), IsMirai: c.IsMirai(num),IsJapariworld: c.IsJapariworld(num)}
 }
