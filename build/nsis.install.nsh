@@ -33,7 +33,7 @@ Section "Geth" GETH_IDX
   SimpleFC::AdvAddRule "Geth outgoing peers (TCP:11235)" ""  6 2 1 2147483647 1 "$INSTDIR\gjpy.exe" "" "" "Ethereum" "" 11235 "" ""
   SimpleFC::AdvAddRule "Geth UDP discovery (UDP:11235)" "" 17 2 1 2147483647 1 "$INSTDIR\gjpy.exe" "" "" "Ethereum" "" 11235 "" ""
 
-  # Set default IPC endpoint (https://github.com/ethereum/EIPs/issues/147)
+  # Set default IPC endpoint (https://github.com/japariyen/EIPs/issues/147)
   ${EnvVarUpdate} $0 "ETHEREUM_SOCKET" "R" "HKLM" "\\.\pipe\gjpy.ipc"
   ${EnvVarUpdate} $0 "ETHEREUM_SOCKET" "A" "HKLM" "\\.\pipe\gjpy.ipc"
 
