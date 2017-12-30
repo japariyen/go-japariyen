@@ -22,12 +22,12 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/common/math"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/japariyen/go-japariyen/common"
+	"github.com/japariyen/go-japariyen/common/hexutil"
+	"github.com/japariyen/go-japariyen/common/math"
+	"github.com/japariyen/go-japariyen/core/types"
+	"github.com/japariyen/go-japariyen/params"
+	"github.com/japariyen/go-japariyen/rlp"
 )
 
 // TransactionTest checks RLP decoding and sender derivation of transactions.

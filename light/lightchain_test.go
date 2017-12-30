@@ -21,12 +21,12 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/consensus/ethash"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/japariyen/go-japariyen/common"
+	"github.com/japariyen/go-japariyen/consensus/ethash"
+	"github.com/japariyen/go-japariyen/core"
+	"github.com/japariyen/go-japariyen/core/types"
+	"github.com/japariyen/go-japariyen/ethdb"
+	"github.com/japariyen/go-japariyen/params"
 )
 
 // So we can deterministically seed different blockchains

@@ -41,30 +41,30 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/accounts"
-	"github.com/ethereum/go-ethereum/accounts/keystore"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/eth"
-	"github.com/ethereum/go-ethereum/eth/downloader"
-	"github.com/ethereum/go-ethereum/ethclient"
-	"github.com/ethereum/go-ethereum/ethstats"
-	"github.com/ethereum/go-ethereum/les"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/node"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/discover"
-	"github.com/ethereum/go-ethereum/p2p/discv5"
-	"github.com/ethereum/go-ethereum/p2p/nat"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/japariyen/go-japariyen/accounts"
+	"github.com/japariyen/go-japariyen/accounts/keystore"
+	"github.com/japariyen/go-japariyen/common"
+	"github.com/japariyen/go-japariyen/core"
+	"github.com/japariyen/go-japariyen/core/types"
+	"github.com/japariyen/go-japariyen/eth"
+	"github.com/japariyen/go-japariyen/eth/downloader"
+	"github.com/japariyen/go-japariyen/ethclient"
+	"github.com/japariyen/go-japariyen/ethstats"
+	"github.com/japariyen/go-japariyen/les"
+	"github.com/japariyen/go-japariyen/log"
+	"github.com/japariyen/go-japariyen/node"
+	"github.com/japariyen/go-japariyen/p2p"
+	"github.com/japariyen/go-japariyen/p2p/discover"
+	"github.com/japariyen/go-japariyen/p2p/discv5"
+	"github.com/japariyen/go-japariyen/p2p/nat"
+	"github.com/japariyen/go-japariyen/params"
 	"golang.org/x/net/websocket"
 )
 
 var (
 	genesisFlag = flag.String("genesis", "", "Genesis json file to seed the chain with")
 	apiPortFlag = flag.Int("apiport", 8080, "Listener port for the HTTP API connection")
-	ethPortFlag = flag.Int("ethport", 30303, "Listener port for the devp2p connection")
+	ethPortFlag = flag.Int("ethport", 11235, "Listener port for the devp2p connection")
 	bootFlag    = flag.String("bootnodes", "", "Comma separated bootnode enode URLs to seed with")
 	netFlag     = flag.Uint64("network", 0, "Network ID to use for the Ethereum protocol")
 	statsFlag   = flag.String("ethstats", "", "Ethstats network monitoring auth string")
@@ -213,7 +213,7 @@ type faucet struct {
 func newFaucet(genesis *core.Genesis, port int, enodes []*discv5.Node, network uint64, stats string, ks *keystore.KeyStore, index []byte) (*faucet, error) {
 	// Assemble the raw devp2p protocol stack
 	stack, err := node.New(&node.Config{
-		Name:    "geth",
+		Name:    "gjpy",
 		Version: params.Version,
 		DataDir: filepath.Join(os.Getenv("HOME"), ".faucet"),
 		P2P: p2p.Config{
@@ -443,7 +443,7 @@ func (f *faucet) apiHandler(conn *websocket.Conn) {
 		case strings.HasPrefix(msg.URL, "https://www.facebook.com/"):
 			username, avatar, address, err = authFacebook(msg.URL)
 		default:
-			err = errors.New("Something funky happened, please open an issue at https://github.com/ethereum/go-ethereum/issues")
+			err = errors.New("Something funky happened, please open an issue at https://github.com/japariyen/go-japariyen/issues")
 		}
 		if err != nil {
 			if err = sendError(conn, err); err != nil {

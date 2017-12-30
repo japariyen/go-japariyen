@@ -31,23 +31,23 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/ethereum/go-ethereum/accounts"
-	"github.com/ethereum/go-ethereum/accounts/keystore"
-	"github.com/ethereum/go-ethereum/cmd/utils"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/console"
-	"github.com/ethereum/go-ethereum/contracts/ens"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/ethclient"
-	"github.com/ethereum/go-ethereum/internal/debug"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/node"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/discover"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/ethereum/go-ethereum/rpc"
-	"github.com/ethereum/go-ethereum/swarm"
-	bzzapi "github.com/ethereum/go-ethereum/swarm/api"
+	"github.com/japariyen/go-japariyen/accounts"
+	"github.com/japariyen/go-japariyen/accounts/keystore"
+	"github.com/japariyen/go-japariyen/cmd/utils"
+	"github.com/japariyen/go-japariyen/common"
+	"github.com/japariyen/go-japariyen/console"
+	"github.com/japariyen/go-japariyen/contracts/ens"
+	"github.com/japariyen/go-japariyen/crypto"
+	"github.com/japariyen/go-japariyen/ethclient"
+	"github.com/japariyen/go-japariyen/internal/debug"
+	"github.com/japariyen/go-japariyen/log"
+	"github.com/japariyen/go-japariyen/node"
+	"github.com/japariyen/go-japariyen/p2p"
+	"github.com/japariyen/go-japariyen/p2p/discover"
+	"github.com/japariyen/go-japariyen/params"
+	"github.com/japariyen/go-japariyen/rpc"
+	"github.com/japariyen/go-japariyen/swarm"
+	bzzapi "github.com/japariyen/go-japariyen/swarm/api"
 	"gopkg.in/urfave/cli.v1"
 )
 
@@ -104,7 +104,7 @@ var (
 	EnsAPIFlag = cli.StringFlag{
 		Name:  "ens-api",
 		Usage: "URL of the Ethereum API provider to use for ENS record lookups",
-		Value: node.DefaultIPCEndpoint("geth"),
+		Value: node.DefaultIPCEndpoint("gjpy"),
 	}
 	EnsAddrFlag = cli.StringFlag{
 		Name:  "ens-addr",
@@ -149,7 +149,7 @@ var (
 
 var defaultNodeConfig = node.DefaultConfig
 
-// This init function sets defaults so cmd/swarm can run alongside geth.
+// This init function sets defaults so cmd/swarm can run alongside gjpy.
 func init() {
 	defaultNodeConfig.Name = clientIdentifier
 	defaultNodeConfig.Version = params.VersionWithCommit(gitCommit)

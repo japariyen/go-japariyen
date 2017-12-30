@@ -1,7 +1,7 @@
 # devp2p Simulations
 
 The `p2p/simulations` package implements a simulation framework which supports
-creating a collection of devp2p nodes, connecting them together to form a
+creating a collection of devp2p nodes, connecting them togjpyer to form a
 simulation network, performing simulation actions in that network and then
 extracting useful information.
 
@@ -73,7 +73,7 @@ The Docker image is built using `docker build` when the adapter is initialised,
 meaning no prior setup is necessary other than having a working Docker client.
 
 Each node listens on the external IP of the container and the default p2p and
-RPC ports (`30303` and `8546` respectively).
+RPC ports (`11235` and `8946` respectively).
 
 ## Network
 
@@ -92,7 +92,7 @@ A simulation network emits the following events:
 
 The events have a "control" flag which when set indicates that the event is the
 outcome of a controlled simulation action (e.g. creating a node or explicitly
-connecting two nodes together).
+connecting two nodes togjpyer).
 
 This is in contrast to a non-control event, otherwise called a "live" event,
 which is the outcome of something happening in the network as a result of a

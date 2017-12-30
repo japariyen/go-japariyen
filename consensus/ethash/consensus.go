@@ -24,20 +24,29 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/math"
-	"github.com/ethereum/go-ethereum/consensus"
-	"github.com/ethereum/go-ethereum/consensus/misc"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/japariyen/go-japariyen/common"
+	"github.com/japariyen/go-japariyen/common/math"
+	"github.com/japariyen/go-japariyen/consensus"
+	"github.com/japariyen/go-japariyen/consensus/misc"
+	"github.com/japariyen/go-japariyen/core/state"
+	"github.com/japariyen/go-japariyen/core/types"
+	"github.com/japariyen/go-japariyen/params"
 	set "gopkg.in/fatih/set.v0"
 )
 
 // Ethash proof-of-work protocol constants.
 var (
-	frontierBlockReward  *big.Int = big.NewInt(5e+18) // Block reward in wei for successfully mining a block
-	byzantiumBlockReward *big.Int = big.NewInt(3e+18) // Block reward in wei for successfully mining a block upward from Byzantium
+	frontierBlockReward  *big.Int = big.NewInt(8e+18) // Block reward in wei for successfully mining a block
+	byzantiumBlockReward *big.Int = big.NewInt(5e+18) // Block reward in wei for successfully mining a block upward from Byzantium
+	japaricollapseBlockReward *big.Int = big.NewInt(8e+18) // Block reward in wei for successfully mining a block upward from japaricollapse
+	japaridevastatedBlockReward *big.Int = big.NewInt(4e+18) // Block reward in wei for successfully mining a block upward from japaridevastated
+	japariskyrocketBlockReward *big.Int = big.NewInt(2e+18) // Block reward in wei for successfully mining a block upward from japariskyrocket
+	kabanBlockReward *big.Int = big.NewInt(3.236e+18) // Block reward in wei for successfully mining a block upward from kaban
+	cellienBlockReward *big.Int = big.NewInt(1.618e+18) // Block reward in wei for successfully mining a block upward from cellien
+	asatteBlockReward *big.Int = big.NewInt(0.809e+18) // Block reward in wei for successfully mining a block upward from asatte
+	friendsBlockReward *big.Int = big.NewInt(1.308962e+18) // Block reward in wei for successfully mining a block upward from friends
+	miraiBlockReward *big.Int = big.NewInt(0.654481e+18) // Block reward in wei for successfully mining a block upward from mirai
+	japariworldBlockReward *big.Int = big.NewInt(0.3272405e+18) // Block reward in wei for successfully mining a block upward from japariworld
 	maxUncles                     = 2                 // Maximum number of uncles allowed in a single block
 )
 
@@ -532,6 +541,33 @@ func AccumulateRewards(config *params.ChainConfig, state *state.StateDB, header 
 	blockReward := frontierBlockReward
 	if config.IsByzantium(header.Number) {
 		blockReward = byzantiumBlockReward
+	}
+	if config.IsJaparicollapse(header.Number) {
+	  blockReward = japaricollapseBlockReward
+	}
+	if config.IsJaparidevastated(header.Number) {
+	  blockReward = japaridevastatedBlockReward
+	}
+	if config.IsJapariskyrocket(header.Number) {
+	  blockReward = japariskyrocketBlockReward
+	}
+	if config.IsKaban(header.Number) {
+	  blockReward = kabanBlockReward
+	}
+	if config.IsCellien(header.Number) {
+	  blockReward = cellienBlockReward
+	}
+	if config.IsAsatte(header.Number) {
+	  blockReward = asatteBlockReward
+	}
+	if config.IsFriends(header.Number) {
+	  blockReward = friendsBlockReward
+	}
+	if config.IsMirai(header.Number) {
+	  blockReward = miraiBlockReward
+	}
+	if config.IsJapariworld(header.Number) {
+	  blockReward = japariworldBlockReward
 	}
 	// Accumulate the rewards for the miner and any included uncles
 	reward := new(big.Int).Set(blockReward)

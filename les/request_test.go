@@ -21,12 +21,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/eth"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/light"
+	"github.com/japariyen/go-japariyen/common"
+	"github.com/japariyen/go-japariyen/core"
+	"github.com/japariyen/go-japariyen/crypto"
+	"github.com/japariyen/go-japariyen/eth"
+	"github.com/japariyen/go-japariyen/ethdb"
+	"github.com/japariyen/go-japariyen/light"
 )
 
 var testBankSecureTrieKey = secAddr(testBankAddress)

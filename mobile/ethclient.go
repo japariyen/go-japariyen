@@ -16,13 +16,13 @@
 
 // Contains a wrapper for the Ethereum client.
 
-package geth
+package gjpy
 
 import (
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/ethclient"
+	"github.com/japariyen/go-japariyen/core/types"
+	"github.com/japariyen/go-japariyen/ethclient"
 )
 
 // EthereumClient provides access to the Ethereum APIs.

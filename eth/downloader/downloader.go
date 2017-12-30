@@ -27,13 +27,13 @@ import (
 	"sync/atomic"
 	"time"
 
-	ethereum "github.com/ethereum/go-ethereum"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/event"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/params"
+	ethereum "github.com/japariyen/go-japariyen"
+	"github.com/japariyen/go-japariyen/common"
+	"github.com/japariyen/go-japariyen/core/types"
+	"github.com/japariyen/go-japariyen/ethdb"
+	"github.com/japariyen/go-japariyen/event"
+	"github.com/japariyen/go-japariyen/log"
+	"github.com/japariyen/go-japariyen/params"
 	"github.com/rcrowley/go-metrics"
 )
 

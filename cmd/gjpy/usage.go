@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU General Public License
 // along with go-ethereum. If not, see <http://www.gnu.org/licenses/>.
 
-// Contains the geth command usage template and generator.
+// Contains the gjpy command usage template and generator.
 
 package main
 
@@ -22,8 +22,8 @@ import (
 	"io"
 	"sort"
 
-	"github.com/ethereum/go-ethereum/cmd/utils"
-	"github.com/ethereum/go-ethereum/internal/debug"
+	"github.com/japariyen/go-japariyen/cmd/utils"
+	"github.com/japariyen/go-japariyen/internal/debug"
 	"gopkg.in/urfave/cli.v1"
 	"strings"
 )

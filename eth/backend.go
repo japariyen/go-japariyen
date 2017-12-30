@@ -25,29 +25,29 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/ethereum/go-ethereum/accounts"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/consensus"
-	"github.com/ethereum/go-ethereum/consensus/clique"
-	"github.com/ethereum/go-ethereum/consensus/ethash"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/bloombits"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/eth/downloader"
-	"github.com/ethereum/go-ethereum/eth/filters"
-	"github.com/ethereum/go-ethereum/eth/gasprice"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/event"
-	"github.com/ethereum/go-ethereum/internal/ethapi"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/miner"
-	"github.com/ethereum/go-ethereum/node"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/ethereum/go-ethereum/rlp"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/japariyen/go-japariyen/accounts"
+	"github.com/japariyen/go-japariyen/common"
+	"github.com/japariyen/go-japariyen/common/hexutil"
+	"github.com/japariyen/go-japariyen/consensus"
+	"github.com/japariyen/go-japariyen/consensus/clique"
+	"github.com/japariyen/go-japariyen/consensus/ethash"
+	"github.com/japariyen/go-japariyen/core"
+	"github.com/japariyen/go-japariyen/core/bloombits"
+	"github.com/japariyen/go-japariyen/core/types"
+	"github.com/japariyen/go-japariyen/core/vm"
+	"github.com/japariyen/go-japariyen/eth/downloader"
+	"github.com/japariyen/go-japariyen/eth/filters"
+	"github.com/japariyen/go-japariyen/eth/gasprice"
+	"github.com/japariyen/go-japariyen/ethdb"
+	"github.com/japariyen/go-japariyen/event"
+	"github.com/japariyen/go-japariyen/internal/ethapi"
+	"github.com/japariyen/go-japariyen/log"
+	"github.com/japariyen/go-japariyen/miner"
+	"github.com/japariyen/go-japariyen/node"
+	"github.com/japariyen/go-japariyen/p2p"
+	"github.com/japariyen/go-japariyen/params"
+	"github.com/japariyen/go-japariyen/rlp"
+	"github.com/japariyen/go-japariyen/rpc"
 )
 
 type LesServer interface {
@@ -140,7 +140,7 @@ func New(ctx *node.ServiceContext, config *Config) (*Ethereum, error) {
 	if !config.SkipBcVersionCheck {
 		bcVersion := core.GetBlockChainVersion(chainDb)
 		if bcVersion != core.BlockChainVersion && bcVersion != 0 {
-			return nil, fmt.Errorf("Blockchain DB version mismatch (%d / %d). Run geth upgradedb.\n", bcVersion, core.BlockChainVersion)
+			return nil, fmt.Errorf("Blockchain DB version mismatch (%d / %d). Run gjpy upgradedb.\n", bcVersion, core.BlockChainVersion)
 		}
 		core.WriteBlockChainVersion(chainDb, core.BlockChainVersion)
 	}
@@ -184,7 +184,7 @@ func makeExtraData(extra []byte) []byte {
 		// create default extradata
 		extra, _ = rlp.EncodeToBytes([]interface{}{
 			uint(params.VersionMajor<<16 | params.VersionMinor<<8 | params.VersionPatch),
-			"geth",
+			"gjpy",
 			runtime.Version(),
 			runtime.GOOS,
 		})

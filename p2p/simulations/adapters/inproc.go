@@ -23,11 +23,11 @@ import (
 	"net"
 	"sync"
 
-	"github.com/ethereum/go-ethereum/event"
-	"github.com/ethereum/go-ethereum/node"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/discover"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/japariyen/go-japariyen/event"
+	"github.com/japariyen/go-japariyen/node"
+	"github.com/japariyen/go-japariyen/p2p"
+	"github.com/japariyen/go-japariyen/p2p/discover"
+	"github.com/japariyen/go-japariyen/rpc"
 )
 
 // SimAdapter is a NodeAdapter which creates in-memory simulation nodes and
@@ -158,7 +158,7 @@ func (self *SimNode) Addr() []byte {
 
 // Node returns a discover.Node representing the SimNode
 func (self *SimNode) Node() *discover.Node {
-	return discover.NewNode(self.ID, net.IP{127, 0, 0, 1}, 30303, 30303)
+	return discover.NewNode(self.ID, net.IP{127, 0, 0, 1}, 11235, 11235)
 }
 
 // Client returns an rpc.Client which can be used to communicate with the

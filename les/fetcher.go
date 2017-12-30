@@ -22,13 +22,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/mclock"
-	"github.com/ethereum/go-ethereum/consensus"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/light"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/japariyen/go-japariyen/common"
+	"github.com/japariyen/go-japariyen/common/mclock"
+	"github.com/japariyen/go-japariyen/consensus"
+	"github.com/japariyen/go-japariyen/core"
+	"github.com/japariyen/go-japariyen/core/types"
+	"github.com/japariyen/go-japariyen/light"
+	"github.com/japariyen/go-japariyen/log"
 )
 
 const (
@@ -702,7 +702,7 @@ type updateStatsEntry struct {
 }
 
 // updateMaxConfirmedTd updates the block delay statistics of active peers. Whenever a new highest Td is confirmed,
-// adds it to the end of a linked list together with the time it has been confirmed. Then checks which peers have
+// adds it to the end of a linked list togjpyer with the time it has been confirmed. Then checks which peers have
 // already confirmed a head with the same or higher Td (which counts as zero block delay) and updates their statistics.
 // Those who have not confirmed such a head by now will be updated by a subsequent checkUpdateStats call with a
 // positive block delay value.
