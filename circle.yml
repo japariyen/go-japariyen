@@ -23,7 +23,7 @@ dependencies:
 
 test:
   override:
-    # Build Geth and move into a known folder
+    # Build Gjpy and move into a known folder
     - make gjpy
     - cp ./build/bin/gjpy $HOME/gjpy
 

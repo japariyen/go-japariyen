@@ -43,7 +43,7 @@ type testgjpy struct {
 }
 
 func init() {
-	// Run the app if we've been exec'd as "gjpy-test" in runGeth.
+	// Run the app if we've been exec'd as "gjpy-test" in runGjpy.
 	reexec.Register("gjpy-test", func() {
 		if err := app.Run(os.Args); err != nil {
 			fmt.Fprintln(os.Stderr, err)
@@ -63,7 +63,7 @@ func TestMain(m *testing.M) {
 
 // spawns gjpy with the given command line args. If the args don't set --datadir, the
 // child g gets a temporary data directory.
-func runGeth(t *testing.T, args ...string) *testgjpy {
+func runGjpy(t *testing.T, args ...string) *testgjpy {
 	tt := &testgjpy{}
 	tt.TestCmd = cmdtest.NewTestCmd(t, tt)
 	for i, arg := range args {
