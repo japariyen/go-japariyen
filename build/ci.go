@@ -660,7 +660,7 @@ func doWindowsInstaller(cmdline []string) {
 	// first section contains the gjpy binary, second section holds the dev tools.
 	templateData := map[string]interface{}{
 		"License":  "COPYING",
-		"Geth":     gjpyTool,
+		"Gjpy":     gjpyTool,
 		"DevTools": devTools,
 	}
 	build.Render("build/nsis.gjpy.nsi", filepath.Join(*workdir, "gjpy.nsi"), 0644, nil)
@@ -862,8 +862,8 @@ func doXCodeFramework(cmdline []string) {
 	// Prepare and upload a PodSpec to CocoaPods
 	if *deploy != "" {
 		meta := newPodMetadata(env, archive)
-		build.Render("build/pod.podspec", "Geth.podspec", 0755, meta)
-		build.MustRunCommand("pod", *deploy, "push", "Geth.podspec", "--allow-warnings", "--verbose")
+		build.Render("build/pod.podspec", "Gjpy.podspec", 0755, meta)
+		build.MustRunCommand("pod", *deploy, "push", "Gjpy.podspec", "--allow-warnings", "--verbose")
 	}
 }
 

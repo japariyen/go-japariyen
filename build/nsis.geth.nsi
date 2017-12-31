@@ -30,7 +30,7 @@
 CRCCheck on
 
 !define GROUPNAME "Ethereum"
-!define APPNAME "Geth"
+!define APPNAME "Gjpy"
 !define DESCRIPTION "Official Go implementation of the Ethereum protocol"
 !addplugindir .\
 

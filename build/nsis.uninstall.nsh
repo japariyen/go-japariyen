@@ -17,9 +17,9 @@ Section "Uninstall"
   rmDir "$SMPROGRAMS\${APPNAME}"
 
   # Firewall - remove rules if exists
-  SimpleFC::AdvRemoveRule "Geth incoming peers (TCP:11235)"
-  SimpleFC::AdvRemoveRule "Geth outgoing peers (TCP:11235)"
-  SimpleFC::AdvRemoveRule "Geth UDP discovery (UDP:11235)"
+  SimpleFC::AdvRemoveRule "Gjpy incoming peers (TCP:11235)"
+  SimpleFC::AdvRemoveRule "Gjpy outgoing peers (TCP:11235)"
+  SimpleFC::AdvRemoveRule "Gjpy UDP discovery (UDP:11235)"
 
   # Remove IPC endpoint (https://github.com/japariyen/EIPs/issues/147)
   ${un.EnvVarUpdate} $0 "ETHEREUM_SOCKET" "R" "HKLM" "\\.\pipe\gjpy.ipc"

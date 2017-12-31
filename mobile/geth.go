@@ -37,7 +37,7 @@ import (
 	whisper "github.com/japariyen/go-japariyen/whisper/whisperv5"
 )
 
-// NodeConfig represents the collection of configuration values to fine tune the Geth
+// NodeConfig represents the collection of configuration values to fine tune the Gjpy
 // node embedded into a mobile process. The available values are a subset of the
 // entire API provided by go-japariyen to reduce the maintenance surface and dev
 // complexity.
@@ -90,12 +90,12 @@ func NewNodeConfig() *NodeConfig {
 	return &config
 }
 
-// Node represents a Geth Ethereum node instance.
+// Node represents a Gjpy Ethereum node instance.
 type Node struct {
 	node *node.Node
 }
 
-// NewNode creates and configures a new Geth node.
+// NewNode creates and configures a new Gjpy node.
 func NewNode(datadir string, config *NodeConfig) (stack *Node, _ error) {
 	// If no or partial configurations were specified, use defaults
 	if config == nil {
